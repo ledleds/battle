@@ -1,8 +1,16 @@
 require 'sinatra/base'
 
 class BattleApp < Sinatra::Base
+
   get '/' do
-    'Hello Battle!'
+    "Welcome to Battle"
+    erb(:index)
+  end
+
+  post '/names' do
+    p params
+    @player_1 = params[:player_1]
+    erb(:play)
   end
 
   # start the server if ruby file executed directly
