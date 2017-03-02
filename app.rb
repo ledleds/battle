@@ -10,14 +10,14 @@ class BattleApp < Sinatra::Base
 
   post '/names' do
     p params
-    session[:player_1] = params[:player_1]
-    session[:player_2] = params[:player_2]
+    session[:player_1_name] = params[:player_1]
+    session[:player_2_name] = params[:player_2]
     redirect '/play'
   end
 
   get '/play' do
-    @player_1 = session[:player_1]
-    @player_2 = session[:player_2]
+    @player_1 = session[:player_1_name]
+    @player_2 = session[:player_2_name]
     erb(:play)
   end
   # start the server if ruby file executed directly
