@@ -1,5 +1,7 @@
 <h1><%= @player_1 %> <em>VS</em> <%= @player_2 %></h1>
 
-<h1><%= @player_1 %> attacked <%= @player_2%></h1>
-
 <h1><%=@player_1%> has 20HP</h1>
+
+<form action="/attack">
+  <input type='submit' value ='Attack!'>
+</form>
