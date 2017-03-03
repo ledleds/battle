@@ -1,9 +1,10 @@
+require 'player'
 
-subject(:player) { described_class.new }
+describe Player do
+  name = 'Joe'
+  subject(:player) { described_class.new(name) }
 
-
-feature 'Returns its name' do
-  scenario 'return name' do
-    expect(player).to
+  it 'returns the players name' do
+      expect(player.name).to eq name
   end
 end
