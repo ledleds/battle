@@ -13,7 +13,6 @@ feature 'View health points of other users' do
     sign_in_and_play
     expect(page).to have_content 'Link HP: 100'
     expect(page).to have_content 'Ganon HP: 100'
-
   end
 end
 
