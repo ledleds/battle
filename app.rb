@@ -19,12 +19,15 @@ class BattleApp < Sinatra::Base
   get '/play' do
     @player_1 = $player_1.name
     @player_2 = $player_2.name
+    @player_1_HP = $player_1.health_points
+    @player_2_HP = $player_2.health_points
     erb(:play)
   end
 
   get '/attack' do
     @player_1 = $player_1.name
     @player_2 = $player_2.name
+    $player_2.take_damage
     erb(:attack)
   end
   # start the server if ruby file executed directly
