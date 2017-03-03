@@ -1,7 +1,7 @@
-<h1><%= @player_1 %> <em>VS</em> <%= @player_2 %></h1>
+<h1><%= $game.player_1.name %> <em>VS</em> <%= $game.player_2.name %></h1>
 
-<h2><%= @player_1 %> HP: <%= @player_1_HP %></h1>
-<h2><%= @player_2 %> HP: <%= @player_2_HP %></h2>
+<h2><%= $game.player_1.name %> HP: <%= $game.player_1.health_points %></h1>
+<h2><%= $game.player_2.name %> HP: <%= $game.player_2.health_points %></h2>
 
 <form action="/attack">
   <input type='submit' value ='Attack!'>

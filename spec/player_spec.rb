@@ -17,8 +17,4 @@ describe Player do
   it 'player health points are reduced by 10' do
     expect{player_1.take_damage}.to change{player_1.health_points}.by -10
   end
-
-  it 'attacks a player' do
-    expect{player_1.attack(player_2)}.to change{player_2.health_points}.by -10
-  end
 end
