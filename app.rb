@@ -23,7 +23,8 @@ class BattleApp < Sinatra::Base
   end
 
   get '/attack' do
-    $game.attack($game.player_2)
+    $game.attack($game.opponent)
+    $game.change_player
     erb(:attack)
   end
   # start the server if ruby file executed directly
